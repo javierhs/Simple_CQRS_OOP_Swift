@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "2BF63861-E9E9-42C5-ABAB-7E00D1D05594"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "68C5B12A-338A-42AC-AC5B-ECBEEF1A7560"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Testing/User/Application/searchAll/SearchAllUsersQueryHandler.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "handle(query:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BEBA1B7B-4908-4641-B047-72EBDE30A6EE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Testing/Shared/Infrastructure/Bus/Query/InMemoryQueryBus.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "dispatch(_:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BEBA1B7B-4908-4641-B047-72EBDE30A6EE - 64cd0115112f6ba5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Any) -&gt; () in Testing.InMemoryQueryBus.dispatch&lt;&#x3c4;_0_0, &#x3c4;_0_1 where &#x3c4;_0_0: Testing.Query&gt;(_: &#x3c4;_0_0, completion: (Swift.Result&lt;&#x3c4;_0_1, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Testing"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/javier.hs/Documents/Estudiar/a/Testing/Testing/Shared/Infrastructure/Bus/Query/InMemoryQueryBus.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "372">
+               </Location>
+               <Location
+                  uuid = "BEBA1B7B-4908-4641-B047-72EBDE30A6EE - 64cd0115112f6ba5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Any) -&gt; () in Testing.InMemoryQueryBus.dispatch&lt;&#x3c4;_0_0, &#x3c4;_0_1 where &#x3c4;_0_0: Testing.Query&gt;(_: &#x3c4;_0_0, completion: (Swift.Result&lt;&#x3c4;_0_1, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Testing"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/javier.hs/Documents/Estudiar/a/Testing/Testing/Shared/Infrastructure/Bus/Query/InMemoryQueryBus.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "560">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
