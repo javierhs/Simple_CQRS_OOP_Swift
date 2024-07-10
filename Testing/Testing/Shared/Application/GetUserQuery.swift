@@ -7,6 +7,10 @@
 
 import Foundation
 
-struct GetUserQuery: Query {
+final class GetUserQuery: Query {
     let userId: String
+    
+    init(userId: String) {
+        self.userId = userId
+    }
 }

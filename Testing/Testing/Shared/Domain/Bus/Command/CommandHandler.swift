@@ -13,7 +13,7 @@ protocol CommandHandler {
     func handle(command: CommandType, completion: @escaping (Result<Void, Error>) -> Void)
 }
 
-//Type-erasure: Esta mierda de clase se hace porque no se puede guardar en una colección valores
+//Type-erasure: Esta clase se hace porque no se puede guardar en una colección valores
 //de tipos que conforman un protocolo que tiene tipos asociados.
 //
 //Para poder guardarlos, se hace esta clase "intermedia", a través de la cual podemos guardar

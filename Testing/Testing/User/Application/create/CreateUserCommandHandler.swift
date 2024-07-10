@@ -17,7 +17,7 @@ final class CreateUserCommandHandler: CommandHandler {
     }
     
     func handle(command: CreateUserCommand, completion: @escaping (Result<Void, Error>) -> Void) {
-        let request = CreateUserRequest(id: command.id, name: command.name)
+        let request = CreateUserRequest(id: command.id, name: command.name, age: command.age)
         CreateUserUseCase(repository: repository)
             .invoke(request: request) { result in
                 completion(result)

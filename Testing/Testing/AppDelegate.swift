@@ -14,20 +14,24 @@ final class MyCommand: Command {
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     private let appSetup: AppSetup
-    private let queryBus: QueryBus = InMemoryQueryBus()
-    private let commandBus: CommandBus = InMemoryCommandBus()
+    //SIMPLE USE --> They need to register commands/querys and handlers (look setup done in AppSetup).
+    //If you do not use that kind of setup, app will crash.
+    /*private let queryBus: QueryBus = SyncQueryBus()
+    private let commandBus: CommandBus = SyncCommandBus()*/
     
     override init() {
-        appSetup = AppSetup(queryBus: queryBus, commandBus: commandBus)
+        appSetup = AppSetup()
         super.init()
     }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        commandBus.dispatch(CreateUserCommand(id: "1", name: "Javi")) { result in
+        
+        //SIMPLE USE
+        /*commandBus.dispatch(CreateUserCommand(id: "1", name: "Javi", age: 30)) { result in
             switch result {
             case .success(_):
-                print("Usuario creado con éxito")
+                print("User created succesfully")
             case .failure(let error):
                 print("ERROR: \(error)")
             }
@@ -35,11 +39,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         queryBus.dispatch(GetUserQuery(userId: "1")) { (result: Result<GetUserResponse, Error>) in
             switch result {
             case .success(let user):
-                print("Success, user: \(user.id) \(user.name)")
+                print("Success, user information:\nId: \(user.id)\nName: \(user.name)\nAge: \(user.age)")
             case .failure(let error):
                 print("Error: \(error)")
             }
+        }*/
+        
+        //Command for creating a user
+        let commandBus = appSetup.commandBusInstance()
+        commandBus.dispatch(CreateUserCommand(id: "1", name: "Javi", age: 60)) { result in
+            switch result {
+            case .success(_):
+                print("User created succesfully")
+            case .failure(let error):
+                print("ERROR: \(error)")
+            }
         }
+        
+        //ViewController for creating a Gold Account
+        let viewController = CreateGoldAccountViewController()
+        viewController.configure(commandBus: commandBus)
+        viewController.createGoldAccount()
         
         return true
     }

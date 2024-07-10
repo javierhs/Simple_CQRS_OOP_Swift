@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class InMemoryCommandBus: CommandBus {
+final class SyncCommandBus: CommandBus {
     private var handlers = [String: AnyCommandHandlerBox]()
     
     func register<C, H>(_ handler: H) where C == H.CommandType, H : CommandHandler {

@@ -8,8 +8,5 @@
 import Foundation
 
 protocol ModuleInitializer {
-    func setup(
-        commandBus: CommandBus,
-        queryBus: QueryBus
-    )
+    func setup()
 }

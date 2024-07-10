@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		D64E54982C3438D300425FC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64E54972C3438D300425FC3 /* AppDelegate.swift */; };
 		D64E549A2C3438D300425FC3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64E54992C3438D300425FC3 /* SceneDelegate.swift */; };
-		D64E549C2C3438D300425FC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64E549B2C3438D300425FC3 /* ViewController.swift */; };
+		D64E549C2C3438D300425FC3 /* CreateGoldAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64E549B2C3438D300425FC3 /* CreateGoldAccountViewController.swift */; };
 		D64E549F2C3438D300425FC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D64E549D2C3438D300425FC3 /* Main.storyboard */; };
 		D64E54A12C3438D500425FC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D64E54A02C3438D500425FC3 /* Assets.xcassets */; };
 		D64E54A42C3438D500425FC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D64E54A22C3438D500425FC3 /* LaunchScreen.storyboard */; };
@@ -30,10 +30,10 @@
 		D64E55212C3A3A5700425FC3 /* CommandBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64E551F2C3A3A5700425FC3 /* CommandBus.swift */; };
 		D64E55232C3A3CC800425FC3 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64E55222C3A3CC800425FC3 /* Response.swift */; };
 		D64E55242C3A3CC800425FC3 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64E55222C3A3CC800425FC3 /* Response.swift */; };
-		D64E552C2C3A46BB00425FC3 /* InMemoryCommandBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64E552B2C3A46BB00425FC3 /* InMemoryCommandBus.swift */; };
-		D64E552D2C3A46BB00425FC3 /* InMemoryCommandBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64E552B2C3A46BB00425FC3 /* InMemoryCommandBus.swift */; };
-		D64E55332C3AF3D200425FC3 /* InMemoryQueryBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64E55322C3AF3D200425FC3 /* InMemoryQueryBus.swift */; };
-		D64E55342C3AF3D200425FC3 /* InMemoryQueryBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64E55322C3AF3D200425FC3 /* InMemoryQueryBus.swift */; };
+		D64E552C2C3A46BB00425FC3 /* SyncCommandBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64E552B2C3A46BB00425FC3 /* SyncCommandBus.swift */; };
+		D64E552D2C3A46BB00425FC3 /* SyncCommandBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64E552B2C3A46BB00425FC3 /* SyncCommandBus.swift */; };
+		D64E55332C3AF3D200425FC3 /* SyncQueryBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64E55322C3AF3D200425FC3 /* SyncQueryBus.swift */; };
+		D64E55342C3AF3D200425FC3 /* SyncQueryBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64E55322C3AF3D200425FC3 /* SyncQueryBus.swift */; };
 		D64E55362C3AF5E800425FC3 /* ModuleInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64E55352C3AF5E800425FC3 /* ModuleInitializer.swift */; };
 		D64E55372C3AF5E800425FC3 /* ModuleInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64E55352C3AF5E800425FC3 /* ModuleInitializer.swift */; };
 		D64E553A2C3AF62D00425FC3 /* UserModuleInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64E55392C3AF62D00425FC3 /* UserModuleInitializer.swift */; };
@@ -66,6 +66,34 @@
 		D64E556F2C3B344C00425FC3 /* GetUserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64E556D2C3B344C00425FC3 /* GetUserResponse.swift */; };
 		D64E55712C3B346200425FC3 /* GetUserUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64E55702C3B346200425FC3 /* GetUserUseCase.swift */; };
 		D64E55722C3B346200425FC3 /* GetUserUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64E55702C3B346200425FC3 /* GetUserUseCase.swift */; };
+		D64E55772C3DFADB00425FC3 /* CreateGoldAccountCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64E55762C3DFADB00425FC3 /* CreateGoldAccountCommand.swift */; };
+		D64E55782C3DFADB00425FC3 /* CreateGoldAccountCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64E55762C3DFADB00425FC3 /* CreateGoldAccountCommand.swift */; };
+		D64E557A2C3DFBA900425FC3 /* CreateGoldAccountCommandHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64E55792C3DFBA900425FC3 /* CreateGoldAccountCommandHandler.swift */; };
+		D64E557B2C3DFBA900425FC3 /* CreateGoldAccountCommandHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64E55792C3DFBA900425FC3 /* CreateGoldAccountCommandHandler.swift */; };
+		D64E557D2C3DFC5A00425FC3 /* CreateGoldAccountRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64E557C2C3DFC5A00425FC3 /* CreateGoldAccountRequest.swift */; };
+		D64E557E2C3DFC5A00425FC3 /* CreateGoldAccountRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64E557C2C3DFC5A00425FC3 /* CreateGoldAccountRequest.swift */; };
+		D64E55802C3DFC8400425FC3 /* CreateGoldAccountUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64E557F2C3DFC8400425FC3 /* CreateGoldAccountUseCase.swift */; };
+		D64E55812C3DFC8400425FC3 /* CreateGoldAccountUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64E557F2C3DFC8400425FC3 /* CreateGoldAccountUseCase.swift */; };
+		D64E55842C3DFD4700425FC3 /* GoldAccountRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64E55832C3DFD4700425FC3 /* GoldAccountRepository.swift */; };
+		D64E55852C3DFD4700425FC3 /* GoldAccountRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64E55832C3DFD4700425FC3 /* GoldAccountRepository.swift */; };
+		D64E55872C3DFD5B00425FC3 /* GoldAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64E55862C3DFD5B00425FC3 /* GoldAccount.swift */; };
+		D64E55882C3DFD5B00425FC3 /* GoldAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64E55862C3DFD5B00425FC3 /* GoldAccount.swift */; };
+		D64E558A2C3DFD9400425FC3 /* GoldAccountError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64E55892C3DFD9400425FC3 /* GoldAccountError.swift */; };
+		D64E558B2C3DFD9400425FC3 /* GoldAccountError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64E55892C3DFD9400425FC3 /* GoldAccountError.swift */; };
+		D64E558E2C3DFE6400425FC3 /* GetGoldAccountQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64E558D2C3DFE6400425FC3 /* GetGoldAccountQuery.swift */; };
+		D64E558F2C3DFE6400425FC3 /* GetGoldAccountQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64E558D2C3DFE6400425FC3 /* GetGoldAccountQuery.swift */; };
+		D64E55912C3DFE8500425FC3 /* GetGoldAccountQueryHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64E55902C3DFE8500425FC3 /* GetGoldAccountQueryHandler.swift */; };
+		D64E55922C3DFE8500425FC3 /* GetGoldAccountQueryHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64E55902C3DFE8500425FC3 /* GetGoldAccountQueryHandler.swift */; };
+		D64E55942C3DFEA500425FC3 /* GetGoldAccountRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64E55932C3DFEA500425FC3 /* GetGoldAccountRequest.swift */; };
+		D64E55952C3DFEA500425FC3 /* GetGoldAccountRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64E55932C3DFEA500425FC3 /* GetGoldAccountRequest.swift */; };
+		D64E55972C3DFED900425FC3 /* GetGoldAccountResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64E55962C3DFED900425FC3 /* GetGoldAccountResponse.swift */; };
+		D64E55982C3DFED900425FC3 /* GetGoldAccountResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64E55962C3DFED900425FC3 /* GetGoldAccountResponse.swift */; };
+		D64E559A2C3DFF1A00425FC3 /* GetGoldAccountUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64E55992C3DFF1A00425FC3 /* GetGoldAccountUseCase.swift */; };
+		D64E559B2C3DFF1A00425FC3 /* GetGoldAccountUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64E55992C3DFF1A00425FC3 /* GetGoldAccountUseCase.swift */; };
+		D64E559F2C3E001700425FC3 /* InMemoryGoldAccountRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64E559E2C3E001700425FC3 /* InMemoryGoldAccountRepository.swift */; };
+		D64E55A02C3E001700425FC3 /* InMemoryGoldAccountRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64E559E2C3E001700425FC3 /* InMemoryGoldAccountRepository.swift */; };
+		D64E55A32C3E00F200425FC3 /* GoldAccountModuleInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64E55A22C3E00F200425FC3 /* GoldAccountModuleInitializer.swift */; };
+		D64E55A42C3E00F200425FC3 /* GoldAccountModuleInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64E55A22C3E00F200425FC3 /* GoldAccountModuleInitializer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,7 +117,7 @@
 		D64E54942C3438D300425FC3 /* Testing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Testing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D64E54972C3438D300425FC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D64E54992C3438D300425FC3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D64E549B2C3438D300425FC3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D64E549B2C3438D300425FC3 /* CreateGoldAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGoldAccountViewController.swift; sourceTree = "<group>"; };
 		D64E549E2C3438D300425FC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D64E54A02C3438D500425FC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D64E54A32C3438D500425FC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -106,8 +134,8 @@
 		D64E551C2C3A3A4A00425FC3 /* QueryBus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryBus.swift; sourceTree = "<group>"; };
 		D64E551F2C3A3A5700425FC3 /* CommandBus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandBus.swift; sourceTree = "<group>"; };
 		D64E55222C3A3CC800425FC3 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
-		D64E552B2C3A46BB00425FC3 /* InMemoryCommandBus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryCommandBus.swift; sourceTree = "<group>"; };
-		D64E55322C3AF3D200425FC3 /* InMemoryQueryBus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryQueryBus.swift; sourceTree = "<group>"; };
+		D64E552B2C3A46BB00425FC3 /* SyncCommandBus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncCommandBus.swift; sourceTree = "<group>"; };
+		D64E55322C3AF3D200425FC3 /* SyncQueryBus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncQueryBus.swift; sourceTree = "<group>"; };
 		D64E55352C3AF5E800425FC3 /* ModuleInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleInitializer.swift; sourceTree = "<group>"; };
 		D64E55392C3AF62D00425FC3 /* UserModuleInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModuleInitializer.swift; sourceTree = "<group>"; };
 		D64E55442C3AFF0100425FC3 /* AppSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSetup.swift; sourceTree = "<group>"; };
@@ -124,6 +152,20 @@
 		D64E556A2C3B342D00425FC3 /* GetUserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserRequest.swift; sourceTree = "<group>"; };
 		D64E556D2C3B344C00425FC3 /* GetUserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserResponse.swift; sourceTree = "<group>"; };
 		D64E55702C3B346200425FC3 /* GetUserUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserUseCase.swift; sourceTree = "<group>"; };
+		D64E55762C3DFADB00425FC3 /* CreateGoldAccountCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGoldAccountCommand.swift; sourceTree = "<group>"; };
+		D64E55792C3DFBA900425FC3 /* CreateGoldAccountCommandHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGoldAccountCommandHandler.swift; sourceTree = "<group>"; };
+		D64E557C2C3DFC5A00425FC3 /* CreateGoldAccountRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGoldAccountRequest.swift; sourceTree = "<group>"; };
+		D64E557F2C3DFC8400425FC3 /* CreateGoldAccountUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGoldAccountUseCase.swift; sourceTree = "<group>"; };
+		D64E55832C3DFD4700425FC3 /* GoldAccountRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldAccountRepository.swift; sourceTree = "<group>"; };
+		D64E55862C3DFD5B00425FC3 /* GoldAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldAccount.swift; sourceTree = "<group>"; };
+		D64E55892C3DFD9400425FC3 /* GoldAccountError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldAccountError.swift; sourceTree = "<group>"; };
+		D64E558D2C3DFE6400425FC3 /* GetGoldAccountQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGoldAccountQuery.swift; sourceTree = "<group>"; };
+		D64E55902C3DFE8500425FC3 /* GetGoldAccountQueryHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGoldAccountQueryHandler.swift; sourceTree = "<group>"; };
+		D64E55932C3DFEA500425FC3 /* GetGoldAccountRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGoldAccountRequest.swift; sourceTree = "<group>"; };
+		D64E55962C3DFED900425FC3 /* GetGoldAccountResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGoldAccountResponse.swift; sourceTree = "<group>"; };
+		D64E55992C3DFF1A00425FC3 /* GetGoldAccountUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGoldAccountUseCase.swift; sourceTree = "<group>"; };
+		D64E559E2C3E001700425FC3 /* InMemoryGoldAccountRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryGoldAccountRepository.swift; sourceTree = "<group>"; };
+		D64E55A22C3E00F200425FC3 /* GoldAccountModuleInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldAccountModuleInitializer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,11 +216,11 @@
 		D64E54962C3438D300425FC3 /* Testing */ = {
 			isa = PBXGroup;
 			children = (
+				D64E55732C3DFAA900425FC3 /* GoldAccount */,
 				D64E55382C3AF61900425FC3 /* User */,
 				D64E55032C3A380D00425FC3 /* Shared */,
 				D64E54972C3438D300425FC3 /* AppDelegate.swift */,
 				D64E54992C3438D300425FC3 /* SceneDelegate.swift */,
-				D64E549B2C3438D300425FC3 /* ViewController.swift */,
 				D64E549D2C3438D300425FC3 /* Main.storyboard */,
 				D64E54A02C3438D500425FC3 /* Assets.xcassets */,
 				D64E54A22C3438D500425FC3 /* LaunchScreen.storyboard */,
@@ -208,6 +250,7 @@
 		D64E55032C3A380D00425FC3 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				D64E55A12C3E00D800425FC3 /* Application */,
 				D64E55252C3A3D5300425FC3 /* Infrastructure */,
 				D64E55042C3A381400425FC3 /* Domain */,
 			);
@@ -273,7 +316,7 @@
 		D64E55272C3A3D6200425FC3 /* Command */ = {
 			isa = PBXGroup;
 			children = (
-				D64E552B2C3A46BB00425FC3 /* InMemoryCommandBus.swift */,
+				D64E552B2C3A46BB00425FC3 /* SyncCommandBus.swift */,
 			);
 			path = Command;
 			sourceTree = "<group>";
@@ -281,7 +324,7 @@
 		D64E552E2C3AEE5100425FC3 /* Query */ = {
 			isa = PBXGroup;
 			children = (
-				D64E55322C3AF3D200425FC3 /* InMemoryQueryBus.swift */,
+				D64E55322C3AF3D200425FC3 /* SyncQueryBus.swift */,
 			);
 			path = Query;
 			sourceTree = "<group>";
@@ -309,10 +352,8 @@
 		D64E55472C3B0B8300425FC3 /* search */ = {
 			isa = PBXGroup;
 			children = (
-				D64E55482C3B0BA700425FC3 /* GetUserQuery.swift */,
 				D64E554B2C3B0BC300425FC3 /* GetUserQueryHandler.swift */,
 				D64E556A2C3B342D00425FC3 /* GetUserRequest.swift */,
-				D64E556D2C3B344C00425FC3 /* GetUserResponse.swift */,
 				D64E55702C3B346200425FC3 /* GetUserUseCase.swift */,
 			);
 			path = search;
@@ -353,6 +394,85 @@
 				D64E55672C3B275300425FC3 /* InMemoryUserRepository.swift */,
 			);
 			path = Repository;
+			sourceTree = "<group>";
+		};
+		D64E55732C3DFAA900425FC3 /* GoldAccount */ = {
+			isa = PBXGroup;
+			children = (
+				D64E559C2C3DFFDA00425FC3 /* Infrastructure */,
+				D64E55822C3DFCB900425FC3 /* Domain */,
+				D64E55742C3DFAB900425FC3 /* Application */,
+				D64E55A22C3E00F200425FC3 /* GoldAccountModuleInitializer.swift */,
+			);
+			path = GoldAccount;
+			sourceTree = "<group>";
+		};
+		D64E55742C3DFAB900425FC3 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				D64E558C2C3DFE5800425FC3 /* search */,
+				D64E55752C3DFAC500425FC3 /* create */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		D64E55752C3DFAC500425FC3 /* create */ = {
+			isa = PBXGroup;
+			children = (
+				D64E55762C3DFADB00425FC3 /* CreateGoldAccountCommand.swift */,
+				D64E55792C3DFBA900425FC3 /* CreateGoldAccountCommandHandler.swift */,
+				D64E557C2C3DFC5A00425FC3 /* CreateGoldAccountRequest.swift */,
+				D64E557F2C3DFC8400425FC3 /* CreateGoldAccountUseCase.swift */,
+			);
+			path = create;
+			sourceTree = "<group>";
+		};
+		D64E55822C3DFCB900425FC3 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				D64E55832C3DFD4700425FC3 /* GoldAccountRepository.swift */,
+				D64E55862C3DFD5B00425FC3 /* GoldAccount.swift */,
+				D64E55892C3DFD9400425FC3 /* GoldAccountError.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		D64E558C2C3DFE5800425FC3 /* search */ = {
+			isa = PBXGroup;
+			children = (
+				D64E558D2C3DFE6400425FC3 /* GetGoldAccountQuery.swift */,
+				D64E55902C3DFE8500425FC3 /* GetGoldAccountQueryHandler.swift */,
+				D64E55932C3DFEA500425FC3 /* GetGoldAccountRequest.swift */,
+				D64E55962C3DFED900425FC3 /* GetGoldAccountResponse.swift */,
+				D64E55992C3DFF1A00425FC3 /* GetGoldAccountUseCase.swift */,
+			);
+			path = search;
+			sourceTree = "<group>";
+		};
+		D64E559C2C3DFFDA00425FC3 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				D64E549B2C3438D300425FC3 /* CreateGoldAccountViewController.swift */,
+				D64E559D2C3DFFE200425FC3 /* Repository */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		D64E559D2C3DFFE200425FC3 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				D64E559E2C3E001700425FC3 /* InMemoryGoldAccountRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		D64E55A12C3E00D800425FC3 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				D64E55482C3B0BA700425FC3 /* GetUserQuery.swift */,
+				D64E556D2C3B344C00425FC3 /* GetUserResponse.swift */,
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -486,29 +606,43 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D64E558A2C3DFD9400425FC3 /* GoldAccountError.swift in Sources */,
 				D64E55572C3B25D500425FC3 /* CreateUserCommand.swift in Sources */,
 				D64E55362C3AF5E800425FC3 /* ModuleInitializer.swift in Sources */,
+				D64E557D2C3DFC5A00425FC3 /* CreateGoldAccountRequest.swift in Sources */,
+				D64E55872C3DFD5B00425FC3 /* GoldAccount.swift in Sources */,
 				D64E553A2C3AF62D00425FC3 /* UserModuleInitializer.swift in Sources */,
 				D64E55492C3B0BA700425FC3 /* GetUserQuery.swift in Sources */,
 				D64E55532C3B0BF700425FC3 /* UserError.swift in Sources */,
 				D64E550C2C3A386F00425FC3 /* Query.swift in Sources */,
 				D64E551D2C3A3A4A00425FC3 /* QueryBus.swift in Sources */,
+				D64E559F2C3E001700425FC3 /* InMemoryGoldAccountRepository.swift in Sources */,
 				D64E55142C3A38F000425FC3 /* QueryHandler.swift in Sources */,
+				D64E55A32C3E00F200425FC3 /* GoldAccountModuleInitializer.swift in Sources */,
+				D64E55802C3DFC8400425FC3 /* CreateGoldAccountUseCase.swift in Sources */,
+				D64E55772C3DFADB00425FC3 /* CreateGoldAccountCommand.swift in Sources */,
 				D64E551A2C3A3A3900425FC3 /* CommandHandler.swift in Sources */,
 				D64E55232C3A3CC800425FC3 /* Response.swift in Sources */,
-				D64E55332C3AF3D200425FC3 /* InMemoryQueryBus.swift in Sources */,
-				D64E549C2C3438D300425FC3 /* ViewController.swift in Sources */,
+				D64E55842C3DFD4700425FC3 /* GoldAccountRepository.swift in Sources */,
+				D64E55332C3AF3D200425FC3 /* SyncQueryBus.swift in Sources */,
+				D64E549C2C3438D300425FC3 /* CreateGoldAccountViewController.swift in Sources */,
+				D64E55972C3DFED900425FC3 /* GetGoldAccountResponse.swift in Sources */,
+				D64E55942C3DFEA500425FC3 /* GetGoldAccountRequest.swift in Sources */,
+				D64E55912C3DFE8500425FC3 /* GetGoldAccountQueryHandler.swift in Sources */,
 				D64E55452C3AFF0100425FC3 /* AppSetup.swift in Sources */,
 				D64E54982C3438D300425FC3 /* AppDelegate.swift in Sources */,
 				D64E55632C3B270C00425FC3 /* UserRepository.swift in Sources */,
+				D64E558E2C3DFE6400425FC3 /* GetGoldAccountQuery.swift in Sources */,
 				D64E55682C3B275300425FC3 /* InMemoryUserRepository.swift in Sources */,
-				D64E552C2C3A46BB00425FC3 /* InMemoryCommandBus.swift in Sources */,
+				D64E552C2C3A46BB00425FC3 /* SyncCommandBus.swift in Sources */,
 				D64E555A2C3B264D00425FC3 /* CreateUserCommandHandler.swift in Sources */,
 				D64E55602C3B26D600425FC3 /* CreateUserRequest.swift in Sources */,
+				D64E557A2C3DFBA900425FC3 /* CreateGoldAccountCommandHandler.swift in Sources */,
 				D64E55712C3B346200425FC3 /* GetUserUseCase.swift in Sources */,
 				D64E556B2C3B342D00425FC3 /* GetUserRequest.swift in Sources */,
 				D64E554C2C3B0BC300425FC3 /* GetUserQueryHandler.swift in Sources */,
 				D64E55502C3B0BEA00425FC3 /* User.swift in Sources */,
+				D64E559A2C3DFF1A00425FC3 /* GetGoldAccountUseCase.swift in Sources */,
 				D64E555D2C3B268C00425FC3 /* CreateUserUseCase.swift in Sources */,
 				D64E549A2C3438D300425FC3 /* SceneDelegate.swift in Sources */,
 				D64E556E2C3B344C00425FC3 /* GetUserResponse.swift in Sources */,
@@ -522,7 +656,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D64E55642C3B270C00425FC3 /* UserRepository.swift in Sources */,
-				D64E552D2C3A46BB00425FC3 /* InMemoryCommandBus.swift in Sources */,
+				D64E552D2C3A46BB00425FC3 /* SyncCommandBus.swift in Sources */,
+				D64E55A42C3E00F200425FC3 /* GoldAccountModuleInitializer.swift in Sources */,
+				D64E55852C3DFD4700425FC3 /* GoldAccountRepository.swift in Sources */,
+				D64E557B2C3DFBA900425FC3 /* CreateGoldAccountCommandHandler.swift in Sources */,
+				D64E55922C3DFE8500425FC3 /* GetGoldAccountQueryHandler.swift in Sources */,
+				D64E55A02C3E001700425FC3 /* InMemoryGoldAccountRepository.swift in Sources */,
 				D64E55462C3AFF0100425FC3 /* AppSetup.swift in Sources */,
 				D64E555E2C3B268C00425FC3 /* CreateUserUseCase.swift in Sources */,
 				D64E55242C3A3CC800425FC3 /* Response.swift in Sources */,
@@ -530,16 +669,23 @@
 				D64E55512C3B0BEA00425FC3 /* User.swift in Sources */,
 				D64E55692C3B275300425FC3 /* InMemoryUserRepository.swift in Sources */,
 				D64E554D2C3B0BC300425FC3 /* GetUserQueryHandler.swift in Sources */,
+				D64E559B2C3DFF1A00425FC3 /* GetGoldAccountUseCase.swift in Sources */,
+				D64E55982C3DFED900425FC3 /* GetGoldAccountResponse.swift in Sources */,
 				D64E555B2C3B264D00425FC3 /* CreateUserCommandHandler.swift in Sources */,
 				D64E55582C3B25D500425FC3 /* CreateUserCommand.swift in Sources */,
+				D64E557E2C3DFC5A00425FC3 /* CreateGoldAccountRequest.swift in Sources */,
+				D64E558B2C3DFD9400425FC3 /* GoldAccountError.swift in Sources */,
 				D64E553B2C3AF62D00425FC3 /* UserModuleInitializer.swift in Sources */,
 				D64E551B2C3A3A3900425FC3 /* CommandHandler.swift in Sources */,
 				D64E550D2C3A386F00425FC3 /* Query.swift in Sources */,
-				D64E55342C3AF3D200425FC3 /* InMemoryQueryBus.swift in Sources */,
+				D64E55342C3AF3D200425FC3 /* SyncQueryBus.swift in Sources */,
+				D64E55812C3DFC8400425FC3 /* CreateGoldAccountUseCase.swift in Sources */,
 				D64E551E2C3A3A4A00425FC3 /* QueryBus.swift in Sources */,
+				D64E55782C3DFADB00425FC3 /* CreateGoldAccountCommand.swift in Sources */,
 				D64E550A2C3A385E00425FC3 /* Command.swift in Sources */,
 				D64E55722C3B346200425FC3 /* GetUserUseCase.swift in Sources */,
 				D64E55212C3A3A5700425FC3 /* CommandBus.swift in Sources */,
+				D64E55952C3DFEA500425FC3 /* GetGoldAccountRequest.swift in Sources */,
 				D64E55372C3AF5E800425FC3 /* ModuleInitializer.swift in Sources */,
 				D64E55542C3B0BF700425FC3 /* UserError.swift in Sources */,
 				D64E554A2C3B0BA700425FC3 /* GetUserQuery.swift in Sources */,
@@ -547,6 +693,8 @@
 				D64E55612C3B26D600425FC3 /* CreateUserRequest.swift in Sources */,
 				D64E556C2C3B342D00425FC3 /* GetUserRequest.swift in Sources */,
 				D64E556F2C3B344C00425FC3 /* GetUserResponse.swift in Sources */,
+				D64E55882C3DFD5B00425FC3 /* GoldAccount.swift in Sources */,
+				D64E558F2C3DFE6400425FC3 /* GetGoldAccountQuery.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

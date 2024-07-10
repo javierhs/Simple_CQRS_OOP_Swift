@@ -1,19 +1,19 @@
 //
-//  UserModuleInitializer.swift
+//  GoldAccountModuleInitializer.swift
 //  Testing
 //
-//  Created by Javier Hernandez Sansalvador on 7/7/24.
+//  Created by Javier Hernandez Sansalvador on 10/7/24.
 //
 
 import Foundation
 
-final class UserModuleInitializer: ModuleInitializer {
-    private let repository: UserRepository
+final class GoldAccountModuleInitializer: ModuleInitializer {
+    private let repository: GoldAccountRepository
     private let queryBus: QueryBus
     private let commandBus: CommandBus
     
     init(
-        repository: UserRepository,
+        repository: GoldAccountRepository,
         queryBus: QueryBus,
         commandBus: CommandBus
     ) {
@@ -28,10 +28,12 @@ final class UserModuleInitializer: ModuleInitializer {
     }
     
     private func registerCommandHandlers() {
-        commandBus.register(CreateUserCommandHandler(repository: repository))
+        commandBus.register(
+            CreateGoldAccountCommandHandler(repository: repository, queryBus: queryBus)
+        )
     }
     
     private func registerQueryHandlers() {
-        queryBus.register(GetUserQueryHandler(repository: repository))
+        queryBus.register(GetGoldAccountQueryHandler(repository: repository))
     }
 }

@@ -15,7 +15,11 @@ final class CreateUserUseCase {
     }
     
     func invoke(request: CreateUserRequest, completion: (Result<Void, Error>) -> Void) {
-        let user = User(id: request.id, name: request.name)
+        let user = User(
+            id: request.id,
+            name: request.name,
+            age: request.age
+        )
         repository.create(user: user, completion: completion)
     }
 }

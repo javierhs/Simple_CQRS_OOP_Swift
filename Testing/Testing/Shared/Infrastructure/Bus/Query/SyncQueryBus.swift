@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class InMemoryQueryBus: QueryBus {
+final class SyncQueryBus: QueryBus {
     private var handlers = [String: AnyQueryHandlerBox]()
     
     func register<Q: Query, R, H: QueryHandler>(_ handler: H) where H.QueryType == Q, H.ResultType == R {

@@ -10,7 +10,7 @@ import Foundation
 
 protocol QueryHandler {
     associatedtype QueryType: Query
-    associatedtype ResultType
+    associatedtype ResultType: Response
 
     func handle(query: QueryType, completion: @escaping (Result<ResultType, Error>) -> Void)
 }

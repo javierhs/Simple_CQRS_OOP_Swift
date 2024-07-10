@@ -10,9 +10,11 @@ import Foundation
 final class CreateUserRequest {
     let id: String
     let name: String
+    let age: UInt
     
-    init(id: String, name: String) {
+    init(id: String, name: String, age: UInt) {
         self.id = id
         self.name = name
+        self.age = age
     }
 }

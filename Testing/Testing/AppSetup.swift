@@ -8,16 +8,36 @@
 import Foundation
 
 final class AppSetup {
-    private let queryBus: QueryBus
-    private let commandBus: CommandBus
+    private let queryBus: QueryBus = SyncQueryBus()
+    private let commandBus: CommandBus = SyncCommandBus()
+    private let userRepository = InMemoryUserRepository()
+    private let goldAccountRepository = InMemoryGoldAccountRepository()
     
-    init(queryBus: QueryBus, commandBus: CommandBus) {
-        self.queryBus = queryBus
-        self.commandBus = commandBus
+    init() {
         setup()
     }
     
     func setup() {
-        UserModuleInitializer().setup(commandBus: commandBus, queryBus: queryBus)
+        //Setting up user module
+        UserModuleInitializer(
+            repository: userRepository,
+            queryBus: queryBus,
+            commandBus: commandBus
+        ).setup()
+        
+        //Setting up gold account module
+        GoldAccountModuleInitializer(
+            repository: goldAccountRepository,
+            queryBus: queryBus,
+            commandBus: commandBus
+        ).setup()
+    }
+    
+    func commandBusInstance() -> CommandBus {
+        commandBus
+    }
+    
+    func queryBusInstance() -> QueryBus {
+        queryBus
     }
 }

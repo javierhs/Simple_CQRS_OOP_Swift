@@ -21,7 +21,7 @@ final class GetUserUseCase {
         repository.read(id: request.id) { result in
             switch result {
             case .success(let user):
-                let response = GetUserResponse(id: user.id, name: user.name)
+                let response = GetUserResponse(id: user.id, name: user.name, age: user.age)
                 completion(.success(response))
             case .failure(let error):
                 completion(.failure(error))
